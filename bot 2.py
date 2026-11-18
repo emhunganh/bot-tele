@@ -1,11 +1,12 @@
+import os
 import telebot
 
-BOT_TOKEN = "9059244472:AAEqtsJgasIHL0Ea0ZrYHJn0HgefX5QzJc"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 bot = telebot.TeleBot(BOT_TOKEN)
 
 CAU_TRA_LOI = (
-    "Xin chào bạn cần tôi giúp gì, bot tự động HA sẽ trả lời ngay thôi.\n"
-    "Hello, how can I help you? The HA automated bot will reply shortly."
+    "Xin chào bạn cần tôi giúp gì, bot tự động\n"
+    "Hello, how can I help you?"
 )
 
 @bot.message_handler(func=lambda message: True)
